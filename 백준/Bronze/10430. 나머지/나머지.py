@@ -1,0 +1,8 @@
+x,y,z = input().split()
+a = int(x)
+b = int(y)
+c = int(z)
+print((a+b)%c)
+print(((a%c) + (b%c))%c)
+print((a*b)%c)
+print(((a%c) * (b%c))%c)
