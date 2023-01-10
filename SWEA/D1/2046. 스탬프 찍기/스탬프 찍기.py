@@ -1,6 +1,5 @@
 num = int(input())
-repeat_num, hash = 0, ''
+repeat_num = 0
 while repeat_num < num :
-    hash += '#'
+    print('#', end = '')
     repeat_num += 1
-print(hash)
