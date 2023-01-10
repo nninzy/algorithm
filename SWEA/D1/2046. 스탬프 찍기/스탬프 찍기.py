@@ -1,5 +1,3 @@
-repeat_num = int(input())
-hash = ''
-for i in range(repeat_num) :
-    hash += '#'
-print(hash)
+num = int(input())
+for i in range(num) :
+    print('#', end='')
