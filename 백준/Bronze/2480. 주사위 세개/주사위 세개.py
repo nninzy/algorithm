@@ -1,17 +1,9 @@
-num_list = list(map(int, input().split()))
-num_dict = {}
-for item in num_list :
-    if item in num_dict.keys() :
-        num_dict[item] += 1
-    else :
-        num_dict[item] = 1
-for key, value in num_dict.items() :
-    if value == 3 :
-        answer = 10000 + key * 1000
-        break;
-    elif value == 2 :
-        answer = 1000 + key * 100
-        break;
-    else :
-        answer = 100 * max(num_dict.keys())
-print(answer)
+n_list = list(map(int, input().split()))
+if n_list.count(n_list[0]) == 3 :
+    print(10000 + n_list[0] * 1000)
+elif n_list.count(n_list[0]) == 2 :
+    print(1000 + n_list[0] * 100)
+elif n_list.count(n_list[1]) == 2 :
+    print(1000 + n_list[1] * 100)
+else :
+    print(100 * max(n_list))
