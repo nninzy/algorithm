@@ -1,9 +1,6 @@
 def solution(sizes):
-    width = 0
-    height = 0
-    
-    for item in sizes:
-        width = max(max(item), width)
-        height = max(min(item), height)
+    sizes = list(map(sorted, sizes))
+    width = max(item[0] for item in sizes)
+    height = max(item[1] for item in sizes)
     answer = width * height
     return answer
