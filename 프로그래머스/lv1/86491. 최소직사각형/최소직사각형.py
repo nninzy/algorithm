@@ -3,11 +3,7 @@ def solution(sizes):
     height = []
     
     for item in sizes:
-        if item[0] > item[1]:
-            width.append(item[0])
-            height.append(item[1])
-        else:
-            width.append(item[1])
-            height.append(item[0])
+        width.append(max(item))
+        height.append(min(item))
     answer = max(width) * max(height)
     return answer
