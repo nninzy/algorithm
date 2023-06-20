@@ -1,9 +1,9 @@
 def solution(sizes):
-    width = []
-    height = []
+    width = 0
+    height = 0
     
     for item in sizes:
-        width.append(max(item))
-        height.append(min(item))
-    answer = max(width) * max(height)
+        width = max(max(item), width)
+        height = max(min(item), height)
+    answer = width * height
     return answer
